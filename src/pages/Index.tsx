@@ -338,7 +338,7 @@ const Index = () => {
                 </div>
                 <div>
                   <Icon name="Mail" className="mx-auto mb-2 text-secondary" size={24} />
-                  <p className="font-medium">info@master-decor.ru</p>
+                  <p className="font-medium">eldar19810112@mail.ru</p>
                   <p className="text-sm text-muted-foreground">Ответим за 1 час</p>
                 </div>
                 <div>
@@ -386,7 +386,7 @@ const Index = () => {
               <h4 className="font-bold mb-4">Контакты</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>+7 (999) 123-45-67</li>
-                <li>info@master-decor.ru</li>
+                <li>eldar19810112@mail.ru</li>
                 <li>Москва, ул. Примерная, 1</li>
               </ul>
             </div>
