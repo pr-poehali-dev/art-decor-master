@@ -96,6 +96,16 @@ const Index = () => {
       image: 'https://cdn.poehali.dev/files/IMG_3751.png',
       title: 'Минималистичная прихожая',
       area: '10 м²'
+    },
+    {
+      image: 'https://cdn.poehali.dev/files/IMG_3749.png',
+      title: 'Столовая зона с декором',
+      area: '15 м²'
+    },
+    {
+      image: 'https://cdn.poehali.dev/files/IMG_3746.png',
+      title: 'Стильная спальня',
+      area: '20 м²'
     }
   ];
 
