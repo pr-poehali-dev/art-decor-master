@@ -50,32 +50,52 @@ const Index = () => {
     {
       image: 'https://cdn.poehali.dev/files/IMG_3757.png',
       title: 'Гостиная с обеденной зоной',
-      area: '35 м²',
-      duration: '2 месяца'
+      area: '35 м²'
     },
     {
       image: 'https://cdn.poehali.dev/files/IMG_3758.png',
       title: 'Современная прихожая',
-      area: '12 м²',
-      duration: '3 недели'
+      area: '12 м²'
     },
     {
       image: 'https://cdn.poehali.dev/files/IMG_3759.png',
       title: 'Ванная комната премиум',
-      area: '8 м²',
-      duration: '1 месяц'
+      area: '8 м²'
     },
     {
       image: 'https://cdn.poehali.dev/files/IMG_3760.png',
       title: 'Уютная гостиная',
-      area: '28 м²',
-      duration: '1.5 месяца'
+      area: '28 м²'
     },
     {
       image: 'https://cdn.poehali.dev/files/IMG_3761.png',
       title: 'Студия с зонированием',
-      area: '32 м²',
-      duration: '2 месяца'
+      area: '32 м²'
+    },
+    {
+      image: 'https://cdn.poehali.dev/files/IMG_3756.png',
+      title: 'Спальня с гардеробной',
+      area: '22 м²'
+    },
+    {
+      image: 'https://cdn.poehali.dev/files/IMG_3754.png',
+      title: 'Уютная спальня',
+      area: '18 м²'
+    },
+    {
+      image: 'https://cdn.poehali.dev/files/IMG_3753.png',
+      title: 'Ванная с душевой',
+      area: '9 м²'
+    },
+    {
+      image: 'https://cdn.poehali.dev/files/IMG_3752.png',
+      title: 'Балкон с зоной отдыха',
+      area: '6 м²'
+    },
+    {
+      image: 'https://cdn.poehali.dev/files/IMG_3751.png',
+      title: 'Минималистичная прихожая',
+      area: '10 м²'
     }
   ];
 
@@ -188,15 +208,9 @@ const Index = () => {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Icon name="Home" size={16} />
-                      <span>{project.area}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Icon name="Clock" size={16} />
-                      <span>{project.duration}</span>
-                    </div>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Icon name="Home" size={16} />
+                    <span>{project.area}</span>
                   </div>
                 </CardContent>
               </Card>
