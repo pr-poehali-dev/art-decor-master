@@ -130,10 +130,6 @@ const Index = () => {
                 <Icon name="Phone" className="mr-2" size={20} />
                 Бесплатная консультация
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                <Icon name="Calculator" className="mr-2" size={20} />
-                Рассчитать стоимость
-              </Button>
             </div>
           </div>
         </div>
