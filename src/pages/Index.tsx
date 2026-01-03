@@ -408,21 +408,39 @@ const Index = () => {
                   Отправить заявку
                 </Button>
               </form>
-              <div className="mt-8 pt-8 border-t grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <Icon name="Phone" className="mx-auto mb-2 text-primary" size={24} />
-                  <p className="font-medium">+7 978 131 04 94</p>
-                  <p className="text-sm text-muted-foreground">Звоните с 9:00 до 20:00</p>
+              <div className="mt-8 pt-8 border-t grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Icon name="Phone" className="text-primary" size={24} />
+                    <div>
+                      <p className="font-medium">+7 978 172 63 30</p>
+                      <p className="text-sm text-muted-foreground">Основной номер</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Phone" className="text-primary" size={24} />
+                    <div>
+                      <p className="font-medium">+7 978 131 04 94</p>
+                      <p className="text-sm text-muted-foreground">Резервный номер</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground pl-9">Звоните с 9:00 до 20:00</p>
                 </div>
-                <div>
-                  <Icon name="Mail" className="mx-auto mb-2 text-secondary" size={24} />
-                  <p className="font-medium">eldar19810112@mail.ru</p>
-                  <p className="text-sm text-muted-foreground">Ответим за 1 час</p>
-                </div>
-                <div>
-                  <Icon name="MapPin" className="mx-auto mb-2 text-accent" size={24} />
-                  <p className="font-medium">Респ. Крым, Судак, ул. Феодосийское шоссе 1</p>
-                  <p className="text-sm text-muted-foreground">Офис с 9:00 до 20:00</p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Icon name="Mail" className="text-secondary" size={24} />
+                    <div>
+                      <p className="font-medium">eldar19810112@mail.ru</p>
+                      <p className="text-sm text-muted-foreground">Ответим за 1 час</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="MapPin" className="text-accent" size={24} />
+                    <div>
+                      <p className="font-medium">Респ. Крым, Судак</p>
+                      <p className="text-sm text-muted-foreground">ул. Феодосийское шоссе 1</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </CardContent>
