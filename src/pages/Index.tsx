@@ -98,19 +98,13 @@ const Index = () => {
             <Icon name="Sparkles" className="text-primary" size={28} />
             <span className="text-2xl font-bold text-primary">Master</span>
           </div>
-          <div className="hidden md:flex items-center gap-6">
+          <div className="flex items-center gap-6">
             <a href="#services" className="text-foreground hover:text-primary transition-colors">Услуги</a>
             <a href="#portfolio" className="text-foreground hover:text-primary transition-colors">Портфолио</a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors">О нас</a>
             <a href="#reviews" className="text-foreground hover:text-primary transition-colors">Отзывы</a>
             <a href="#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</a>
           </div>
-          <Button size="lg" className="hidden md:flex">
-            Заказать звонок
-          </Button>
-          <Button size="icon" variant="ghost" className="md:hidden">
-            <Icon name="Menu" size={24} />
-          </Button>
         </nav>
       </header>
 
@@ -125,12 +119,6 @@ const Index = () => {
               Полный спектр ремонтных работ для квартир, домов, коттеджей и апартаментов. 
               Дизайн, черновая и чистовая отделка под ключ.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6">
-                <Icon name="Phone" className="mr-2" size={20} />
-                Бесплатная консультация
-              </Button>
-            </div>
           </div>
         </div>
       </section>
