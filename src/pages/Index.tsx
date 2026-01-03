@@ -67,26 +67,12 @@ const Index = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Елена Смирнова',
-      rating: 5,
-      text: 'Отличная работа! Ребята сделали ремонт качественно и в срок. Особенно понравился индивидуальный подход к дизайну.',
-      project: 'Ремонт 3-комнатной квартиры'
-    },
-    {
-      name: 'Михаил Петров',
-      rating: 5,
-      text: 'Профессионалы своего дела. Отделали наш коттедж под ключ. Все работы выполнены на высшем уровне!',
-      project: 'Отделка коттеджа 200 м²'
-    },
-    {
-      name: 'Анна Волкова',
-      rating: 5,
-      text: 'Спасибо команде Master за красивый дизайн и качественное исполнение! Квартира получилась как с картинки.',
-      project: 'Дизайн и ремонт квартиры'
-    }
-  ];
+  const testimonials: Array<{
+    name: string;
+    rating: number;
+    text: string;
+    project: string;
+  }> = [];
 
   const advantages = [
     { icon: 'Award', text: 'Опыт работы более 10 лет' },
@@ -131,9 +117,7 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <Badge className="mb-6 text-base py-2 px-4" variant="secondary">
-              Отделка под ключ с 2014 года
-            </Badge>
+
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
               Создаём пространства вашей мечты
             </h1>
@@ -250,38 +234,40 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Отзывы клиентов</h2>
-            <p className="text-xl text-muted-foreground">
-              Что говорят о нас наши клиенты
-            </p>
+      {testimonials.length > 0 && (
+        <section id="reviews" className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Отзывы клиентов</h2>
+              <p className="text-xl text-muted-foreground">
+                Что говорят о нас наши клиенты
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {testimonials.map((review, index) => (
+                <Card 
+                  key={index} 
+                  className="hover:shadow-2xl transition-all duration-300 animate-scale-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-1 mb-4">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Icon key={i} name="Star" className="text-yellow-400 fill-yellow-400" size={20} />
+                      ))}
+                    </div>
+                    <p className="text-muted-foreground mb-4 italic">"{review.text}"</p>
+                    <div className="border-t pt-4">
+                      <p className="font-bold">{review.name}</p>
+                      <p className="text-sm text-muted-foreground">{review.project}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((review, index) => (
-              <Card 
-                key={index} 
-                className="hover:shadow-2xl transition-all duration-300 animate-scale-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" className="text-yellow-400 fill-yellow-400" size={20} />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-4 italic">"{review.text}"</p>
-                  <div className="border-t pt-4">
-                    <p className="font-bold">{review.name}</p>
-                    <p className="text-sm text-muted-foreground">{review.project}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section id="contacts" className="py-20 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
         <div className="container mx-auto max-w-4xl">
@@ -333,7 +319,7 @@ const Index = () => {
               <div className="mt-8 pt-8 border-t grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
                   <Icon name="Phone" className="mx-auto mb-2 text-primary" size={24} />
-                  <p className="font-medium">+7 (999) 123-45-67</p>
+                  <p className="font-medium">+7 978 131 04 94</p>
                   <p className="text-sm text-muted-foreground">Звоните с 9:00 до 21:00</p>
                 </div>
                 <div>
@@ -343,7 +329,7 @@ const Index = () => {
                 </div>
                 <div>
                   <Icon name="MapPin" className="mx-auto mb-2 text-accent" size={24} />
-                  <p className="font-medium">Москва, ул. Примерная, 1</p>
+                  <p className="font-medium">Респ. Крым, Судак, ул. Феодосийское шоссе 1</p>
                   <p className="text-sm text-muted-foreground">Офис с 10:00 до 19:00</p>
                 </div>
               </div>
@@ -385,9 +371,9 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-4">Контакты</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>+7 (999) 123-45-67</li>
+                <li>+7 978 131 04 94</li>
                 <li>eldar19810112@mail.ru</li>
-                <li>Москва, ул. Примерная, 1</li>
+                <li>Респ. Крым, Судак, ул. Феодосийское шоссе 1</li>
               </ul>
             </div>
           </div>
