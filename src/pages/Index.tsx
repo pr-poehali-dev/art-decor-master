@@ -75,10 +75,10 @@ const Index = () => {
   }> = [];
 
   const advantages = [
-    { icon: 'Award', text: 'Опыт работы более 10 лет' },
-    { icon: 'Users', text: 'Команда из 25+ специалистов' },
+    { icon: 'Award', text: 'Опыт работы более 15 лет' },
+    { icon: 'Users', text: 'Команда из 20+ специалистов' },
     { icon: 'Clock', text: 'Соблюдение сроков' },
-    { icon: 'Shield', text: 'Гарантия на все работы 3 года' },
+    { icon: 'Shield', text: 'Гарантия на все работы 5 лет' },
     { icon: 'Wallet', text: 'Наличный и безналичный расчет' },
     { icon: 'FileText', text: 'Официальный договор' }
   ];
@@ -320,7 +320,7 @@ const Index = () => {
                 <div>
                   <Icon name="Phone" className="mx-auto mb-2 text-primary" size={24} />
                   <p className="font-medium">+7 978 131 04 94</p>
-                  <p className="text-sm text-muted-foreground">Звоните с 9:00 до 21:00</p>
+                  <p className="text-sm text-muted-foreground">Звоните с 9:00 до 20:00</p>
                 </div>
                 <div>
                   <Icon name="Mail" className="mx-auto mb-2 text-secondary" size={24} />
@@ -330,7 +330,7 @@ const Index = () => {
                 <div>
                   <Icon name="MapPin" className="mx-auto mb-2 text-accent" size={24} />
                   <p className="font-medium">Респ. Крым, Судак, ул. Феодосийское шоссе 1</p>
-                  <p className="text-sm text-muted-foreground">Офис с 10:00 до 19:00</p>
+                  <p className="text-sm text-muted-foreground">Офис с 9:00 до 20:00</p>
                 </div>
               </div>
             </CardContent>
