@@ -48,22 +48,34 @@ const Index = () => {
 
   const portfolio = [
     {
-      image: 'https://cdn.poehali.dev/projects/d33a6f32-6733-4a1b-b69f-b039e592aecd/files/b1c330cf-d8e1-44cf-a2cf-1030abefa815.jpg',
-      title: 'Современная квартира',
-      area: '85 м²',
-      duration: '3 месяца'
+      image: 'https://cdn.poehali.dev/files/IMG_3757.png',
+      title: 'Гостиная с обеденной зоной',
+      area: '35 м²',
+      duration: '2 месяца'
     },
     {
-      image: 'https://cdn.poehali.dev/projects/d33a6f32-6733-4a1b-b69f-b039e592aecd/files/9070dc76-bbd9-40b1-80e5-f2d430efbfbf.jpg',
-      title: 'Кухня премиум-класса',
-      area: '25 м²',
+      image: 'https://cdn.poehali.dev/files/IMG_3758.png',
+      title: 'Современная прихожая',
+      area: '12 м²',
+      duration: '3 недели'
+    },
+    {
+      image: 'https://cdn.poehali.dev/files/IMG_3759.png',
+      title: 'Ванная комната премиум',
+      area: '8 м²',
       duration: '1 месяц'
     },
     {
-      image: 'https://cdn.poehali.dev/projects/d33a6f32-6733-4a1b-b69f-b039e592aecd/files/78ccae4f-a316-4d0b-9172-89947142f044.jpg',
-      title: 'Спальня с гардеробной',
-      area: '40 м²',
+      image: 'https://cdn.poehali.dev/files/IMG_3760.png',
+      title: 'Уютная гостиная',
+      area: '28 м²',
       duration: '1.5 месяца'
+    },
+    {
+      image: 'https://cdn.poehali.dev/files/IMG_3761.png',
+      title: 'Студия с зонированием',
+      area: '32 м²',
+      duration: '2 месяца'
     }
   ];
 
