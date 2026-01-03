@@ -206,26 +206,134 @@ const Index = () => {
       </section>
 
       <section id="about" className="py-20 px-4 bg-white">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Почему выбирают нас</h2>
-            <p className="text-xl text-muted-foreground">
-              Наши преимущества и гарантии качества
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">О компании АртМастер</h2>
+            <div className="max-w-4xl mx-auto text-lg text-muted-foreground space-y-4">
+              <p>
+                Добро пожаловать в компанию <span className="font-semibold text-foreground">АртМастер</span> – ваш надежный партнер в ремонте под ключ! 
+                Мы специализируемся на комплексном ремонтном обслуживании квартир, домов и коммерческих помещений, 
+                превращая любые проекты в идеальное пространство для жизни и работы.
+              </p>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {advantages.map((advantage, index) => (
-              <div 
-                key={index} 
-                className="flex items-center gap-4 p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl hover:shadow-lg transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name={advantage.icon} className="text-white" size={24} />
-                </div>
-                <p className="font-medium">{advantage.text}</p>
+
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center mb-12">Наши преимущества</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="Award" className="text-white" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold mb-2">Профессионализм и опыт</h4>
+                      <p className="text-muted-foreground">
+                        Команда АртМастер состоит из квалифицированных специалистов с многолетним опытом в строительстве и дизайне интерьеров.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="UserCheck" className="text-white" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold mb-2">Индивидуальный подход</h4>
+                      <p className="text-muted-foreground">
+                        Мы тщательно анализируем пожелания клиента и особенности объекта, предлагая оптимальные решения с учетом бюджета и сроков.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="Star" className="text-white" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold mb-2">Высокое качество материалов и работ</h4>
+                      <p className="text-muted-foreground">
+                        Используем только проверенные материалы и современные технологии, гарантируя долговечность и эстетическую привлекательность ремонта.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="CheckCircle2" className="text-white" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold mb-2">Полный спектр услуг под ключ</h4>
+                      <p className="text-muted-foreground">
+                        От дизайна и подготовительных работ до установки коммуникаций и финишной отделки – мы берем на себя все этапы.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl md:col-span-2">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="DollarSign" className="text-white" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold mb-2">Прозрачное ценообразование</h4>
+                      <p className="text-muted-foreground">
+                        Никаких скрытых затрат – вы всегда знаете, за что платите.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <Card className="bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-2 border-primary/20">
+            <CardContent className="p-8 md:p-12 text-center">
+              <Icon name="Target" className="mx-auto mb-6 text-primary" size={48} />
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Миссия компании</h3>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Создавать комфортные и стильные пространства, которые отражают индивидуальность наших клиентов и делают их жизнь лучше.
+              </p>
+              <div className="mt-8 pt-8 border-t border-primary/20">
+                <p className="text-xl font-semibold text-primary">
+                  АртМастер – искусство ремонта в каждой детали.
+                </p>
               </div>
-            ))}
+            </CardContent>
+          </Card>
+
+          <div className="mt-16">
+            <h3 className="text-3xl font-bold text-center mb-8">Быстрые факты</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {advantages.map((advantage, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-center gap-4 p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl hover:shadow-lg transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name={advantage.icon} className="text-white" size={24} />
+                  </div>
+                  <p className="font-medium">{advantage.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
